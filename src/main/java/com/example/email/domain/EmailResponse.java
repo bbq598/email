@@ -10,5 +10,4 @@ import lombok.*;
 @ToString
 public class EmailResponse {
     public String content;
-
 }

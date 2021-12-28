@@ -18,14 +18,15 @@ public class Example {
 
     public static void main(String[] args) throws IOException {
 
-        Email from = new Email("bbq598@hotmail.com");
+        Email from = new Email("bbq598@gmail.com");
         String subject = "Sending with SendGrid is Fun";
-        Email to = new Email("bbq598@gmail.com");
+        Email to = new Email("bbq598@hotmail.com");
         Content content = new Content("text/plain", "and easy to do anywhere, even with Java");
         Mail mail = new Mail(from, subject, to, content);
         mail.getPersonalization().get(0).addBcc(new Email("bbq598@bu.edu"));
         mail.getPersonalization().get(0).addCc(new Email("710397430@qq.com"));
-        SendGrid sg = new SendGrid("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");
+
+        SendGrid sg = new SendGrid("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");
         Request request = new Request();
         try {
             request.setMethod(Method.POST);
