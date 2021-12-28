@@ -85,7 +85,8 @@ public class EmailService {
         mail.setSubject(subject);
         mail.addContent(content);
         mail.addPersonalization(personalization);
-        SendGrid sg = new SendGrid("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");
+        //SendGrid sg = new SendGrid("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");
+        SendGrid sg = new SendGrid(System.getenv("SENDGRID_API_KEY"));
         Request request = new Request();
         try {
             request.setMethod(Method.POST);
